@@ -1,0 +1,16 @@
+﻿@model MVC5.Models.CitiesViewModel
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+<h2>Contact</h2>
+
+<div style="font-family:Arial">
+    @using (@Html.BeginForm())
+    {
+        @Html.ListBoxFor(x=>x.SelectedCities, Model.Cities,new { size=6})
+        <br />
+        <input type="Submit" value="Submit"/>
+    }
+</div>
